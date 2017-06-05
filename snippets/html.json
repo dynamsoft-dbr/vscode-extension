@@ -1,0 +1,44 @@
+{
+	"include": {
+        "prefix": "dbr include",
+        "body": [
+            "<script type=\"text/javascript\" src=\"http://www.dynamsoft.com/library/dbr/dynamsoft.barcode.min.js\"> </script>"
+        ],
+        "description": "Include Dynamsoft Barcode Reader JavaScript library."
+    },
+    "full sample": {
+        "prefix": "dbr full sample",
+        "body": [
+            "<!DOCTYPE html>\n<html>\n<head>\n\t<title>Hello World</title>",
+            "\t<script type=\"text/javascript\" src=\"http://www.dynamsoft.com/library/dbr/dynamsoft.barcode.min.js\"></script>\n</head>\n<body>",
+            "\t<h1>Dynamsoft Barcode Reader: Linear, QRCode, PDF417 & DataMatrix</h1>",
+			"\t<input type=\"file\" id=\"fileToUpload\"/><br>",
+			"\t<input type=\"button\" value=\"Read Barcode\" onclick=\"doReadBarcode()\" />",
+            "\t<div id=\"resultBox\"/>\n",
+            "\t<script type=\"text/javascript\">",
+            "\t\tvar dbrObject;",
+            "\t\tfunction onInitSuccess() {dbrObject = new dynamsoft.dbrEnv.BarcodeReader();}",
+            "\t\tfunction onInitError(errCode, errMsg) {alert(errMsg);}",
+            "\t\tdynamsoft.dbrEnv.init(onInitSuccess, onInitError);\n",
+            "\t\tfunction onBarcodeReadSuccess(userData, result) {",
+            "\t\t\tvar count = result.getCount();",
+            "\t\t\tvar strMsg = \"\";",
+            "\t\t\tif (count > 0) {",
+			"\t\t\t\tfor (var i = 0; i < count; i++) {",
+			"\t\t\t\t\tstrMsg += \"<p>\" + \"Index: \" + i + \". \";",
+			"\t\t\t\t\tstrMsg += \"Barcode Type: \" + result.get(i).formatString + \", \";",
+			"\t\t\t\t\tstrMsg += \"Barcode Value: \" + result.get(i).text + \".</p>\";",
+			"\t\t\t\t}",
+			"\t\t\t\tdocument.getElementById('resultBox').innerHTML = strMsg;",
+			"\t\t\t} else {alert(\"No barcode found.\");}",
+            "\t\t}\n",
+            "\t\tfunction onBarcodeReadFailure(userData, errorCode, errorString) {alert(errorCode + errorString);}\n",
+            "\t\tfunction doReadBarcode() {",
+            "\t\t\tvar file = document.getElementById(\"fileToUpload\").files[0];",
+			"\t\t\tdbrObject.readBinaryAsync(file, \"tmp\", onBarcodeReadSuccess, onBarcodeReadFailure);",
+            "\t}",
+            "\t</script>\n</body>\n</html>"
+        ],
+        "description": "The full sample code - hello world."
+    }
+}

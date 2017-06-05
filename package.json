@@ -1,0 +1,36 @@
+{
+    "name": "dbr",
+    "displayName": "Dynamsoft Barcode Reader",
+    "description": "Dynamsoft's Barcode Reader is a recognition SDK which enables you to embed barcode reading functionality in your web, desktop, and mobile application. Its JavaScript Edition is browser-based and designed for web applications. With just a few lines of JavaScript code, you can develop a robust application to scan a linear barcode, QR Code, DataMatrix, and PDF417.",
+    "version": "0.0.1",
+    "publisher": "Dynamsoft",
+    "icon": "images/dbr.jpg",
+    "categories": [
+        "Snippets"
+    ],
+    "galleryBanner": {
+        "color": "#f5f3f4",
+        "theme": "light"
+    },
+    "homepage": "http://www.dynamsoft.com/Products/barcode-recognition-javascript.aspx",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Dynamsoft/Dynamsoft-Barcode-Reader.git"
+    },
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "keywords": [
+        "Barcode SDK",
+        "JavaScript barcode",
+        "web barcode",
+        "Barcode reader",
+        "JS barcode"
+    ],
+    "contributes": {
+        "snippets": [{
+            "language": "html",
+            "path": "./snippets/html.json"
+        }]
+    }
+}
