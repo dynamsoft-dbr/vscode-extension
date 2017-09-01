@@ -32,7 +32,7 @@ Use the prefix **dbr** to list the code snippets in **HTML** files.
 <html>
 <head>
     <title>Hello World</title>
-    <script type="text/javascript" src="http://www.dynamsoft.com/library/dbr/dynamsoft.barcode.min.js"></script>
+    <script type="text/javascript" src="https://www.dynamsoft.com/library/dbr/dynamsoft.barcode.min.js"></script>
 </head>
 <body>
     <h1>Dynamsoft Barcode Reader: Linear, QRCode, PDF417 & DataMatrix</h1>
@@ -70,7 +70,7 @@ Use the prefix **dbr** to list the code snippets in **HTML** files.
 </html>
 ```
 
-[1]:http://www.dynamsoft.com/Products/barcode-recognition-javascript.aspx
-[2]:http://www.dynamsoft.com/Products/read-barcode-from-image-pdf.aspx
-[3]:http://www.dynamsoft.com/Products/Dynamic-Barcode-Reader-News.aspx
-[4]:http://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx#dbrResourceGuide
+[1]:https://www.dynamsoft.com/Products/barcode-recognition-javascript.aspx
+[2]:https://www.dynamsoft.com/Products/read-barcode-from-image-pdf.aspx
+[3]:https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader-News.aspx
+[4]:https://www.dynamsoft.com/Products/Barcode-Reader-Resources.aspx#dbrResourceGuide

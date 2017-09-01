@@ -2,7 +2,7 @@
 	"include": {
         "prefix": "dbr include",
         "body": [
-            "<script type=\"text/javascript\" src=\"http://www.dynamsoft.com/library/dbr/dynamsoft.barcode.min.js\"> </script>"
+            "<script type=\"text/javascript\" src=\"https://www.dynamsoft.com/library/dbr/dynamsoft.barcode.min.js\"> </script>"
         ],
         "description": "Include Dynamsoft Barcode Reader JavaScript library."
     },
@@ -10,7 +10,7 @@
         "prefix": "dbr full sample",
         "body": [
             "<!DOCTYPE html>\n<html>\n<head>\n\t<title>Hello World</title>",
-            "\t<script type=\"text/javascript\" src=\"http://www.dynamsoft.com/library/dbr/dynamsoft.barcode.min.js\"></script>\n</head>\n<body>",
+            "\t<script type=\"text/javascript\" src=\"https://www.dynamsoft.com/library/dbr/dynamsoft.barcode.min.js\"></script>\n</head>\n<body>",
             "\t<h1>Dynamsoft Barcode Reader: Linear, QRCode, PDF417 & DataMatrix</h1>",
 			"\t<input type=\"file\" id=\"fileToUpload\"/><br>",
 			"\t<input type=\"button\" value=\"Read Barcode\" onclick=\"doReadBarcode()\" />",
