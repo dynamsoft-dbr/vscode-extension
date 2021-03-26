@@ -1,36 +1,72 @@
 {
-    "name": "dbr",
-    "displayName": "Dynamsoft Barcode Reader",
-    "description": "Dynamsoft's Barcode Reader is a recognition SDK which enables you to embed barcode reading functionality in your web, desktop, and mobile application. Its JavaScript Edition is browser-based and designed for web applications. With just a few lines of JavaScript code, you can develop a robust application to scan a linear barcode, QR Code, DataMatrix, and PDF417.",
-    "version": "0.0.2",
-    "publisher": "Dynamsoft",
-    "icon": "images/dbr.jpg",
-    "categories": [
-        "Snippets"
-    ],
-    "galleryBanner": {
-        "color": "#f5f3f4",
-        "theme": "light"
-    },
-    "homepage": "https://www.dynamsoft.com/Products/barcode-recognition-javascript.aspx",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Dynamsoft/Dynamsoft-Barcode-Reader.git"
-    },
-    "engines": {
-        "vscode": "^1.5.0"
-    },
-    "keywords": [
-        "Barcode SDK",
-        "JavaScript barcode",
-        "web barcode",
-        "Barcode reader",
-        "JS barcode"
-    ],
-    "contributes": {
-        "snippets": [{
-            "language": "html",
-            "path": "./snippets/html.json"
-        }]
-    }
+	"name": "dbr",
+	"displayName": "Dynamsoft Barcode Reader",
+	"description": "Dynamsoft's Barcode Reader is a recognition SDK which enables you to embed barcode reading functionality in your web, desktop, and mobile application. Its JavaScript Edition is browser-based and designed for web applications. With just a few lines of JavaScript code, you can develop a robust application to scan a linear barcode, QR Code, DataMatrix, and PDF417.",
+	"version": "8.2.0",
+	"publisher": "Dynamsoft",
+	"icon": "images/dbr.jpg",
+	"categories": [
+		"Snippets"
+	],
+	"galleryBanner": {
+		"color": "#f5f3f4",
+		"theme": "light"
+	},
+	"homepage": "https://www.dynamsoft.com/barcode-reader/sdk-javascript/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dynamsoft/javascript-barcode"
+	},
+	"engines": {
+		"vscode": "^1.54.0"
+	},
+	"keywords": [
+		"Barcode SDK",
+		"JavaScript barcode",
+		"Web barcode",
+		"Barcode reader",
+		"JS barcode",
+		"WebAssembly",
+		"Barcode scanner"
+	],
+	"activationEvents": [
+		"onCommand:dbr.create"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "dbr.create",
+				"title": "Quick Start",
+				"category": "dbr"
+			}
+		],
+		"snippets": [
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.54.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	}
 }
